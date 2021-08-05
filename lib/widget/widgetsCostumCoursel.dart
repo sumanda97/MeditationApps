@@ -33,7 +33,7 @@ class CardWidget extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: kFontStyle1.copyWith(color: kBGColor),
+                style: kFontStyle1.copyWith(color: kBGColor, fontSize: 18),
               ),
               Text(
                 subtitle,
@@ -53,7 +53,8 @@ class CardWidget extends StatelessWidget {
                       onPressed: onTap,
                       child: Text(
                         "START",
-                        style: kFontStyle3.copyWith(color: Colors.black),
+                        style: kFontStyle3.copyWith(
+                            color: Colors.black, fontSize: 11),
                       ))
                 ],
               )

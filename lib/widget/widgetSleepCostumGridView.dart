@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:meditationapp/Theme/theme.dart';
 import 'package:meditationapp/UI/uiDetails.dart/uidetails.dart';
 
-import 'package:meditationapp/models/listMusic.dart';
+import 'package:meditationapp/models/listMusicSleep.dart';
 
 class CostumGrid extends StatelessWidget {
   @override
@@ -22,13 +22,13 @@ class CostumGrid extends StatelessWidget {
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           itemBuilder: (context, int index) {
-            final MusicList musicList = musics[index];
+            final MusicSleepList musicsList = musics[index];
             return GestureDetector(
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (_) => MusicDetails(
-                          musicList: musicList,
+                          musicList: musicsList,
                         )),
               ),
               child: Card(
@@ -37,10 +37,10 @@ class CostumGrid extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 child: GridTile(
                   child: Hero(
-                    tag: musicList.imageUrl,
+                    tag: musicsList.imageUrl,
                     child: ClipRect(
                       child: Image(
-                        image: CachedNetworkImageProvider(musicList.imageUrl),
+                        image: CachedNetworkImageProvider(musicsList.imageUrl),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -50,12 +50,12 @@ class CostumGrid extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          musicList.name,
+                          musicsList.name,
                           style: kFontStyle1.copyWith(
                               fontSize: 18, letterSpacing: 1.0),
                         ),
                         Text(
-                          musicList.duration,
+                          musicsList.duration,
                           style: kFontStyle3.copyWith(
                               fontSize: 10, letterSpacing: 1.0),
                         )

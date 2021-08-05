@@ -1,7 +1,7 @@
 part of 'uidetails.dart';
 
 class MusicDetails extends StatefulWidget {
-  final MusicList musicList;
+  final MusicSleepList musicList;
   MusicDetails({this.musicList});
 
   @override
@@ -257,7 +257,7 @@ class RelatedPost extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: musics.length,
               itemBuilder: (BuildContext context, int index) {
-                MusicList musicList = musics[index];
+                MusicSleepList musicList = musics[index];
                 return GestureDetector(
                   onTap: () => Navigator.push(
                     context,

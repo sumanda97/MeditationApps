@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meditationapp/UI/ui.dart';
+import 'UI/ui.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +10,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/sign': (context) => SignInSignUpPage(),
+        '/signin': (context) => SignInPage(),
+        '/signup': (context) => SignUpPage(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }

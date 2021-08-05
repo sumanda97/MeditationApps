@@ -65,7 +65,10 @@ class HomePageScreen extends StatelessWidget {
                 title: "Basics",
                 subtitle: "Course",
                 description: "3-10 MIN",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeDetail()));
+                },
               ),
               SizedBox(
                 width: 20,
