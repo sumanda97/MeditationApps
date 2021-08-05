@@ -32,45 +32,52 @@ class CostumGridCard extends StatelessWidget {
                         height: double.infinity,
                         width: double.infinity,
                         color: kBGColor),
-                    Container(
-                      height: 100,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Expanded(
+                          flex: 3,
+                          child: Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10),
+                                ),
+                                image: DecorationImage(
+                                    image: CachedNetworkImageProvider(
+                                        musicList.imageUrl),
+                                    fit: BoxFit.cover)),
                           ),
-                          image: DecorationImage(
-                              image: CachedNetworkImageProvider(
-                                  musicList.imageUrl),
-                              fit: BoxFit.cover)),
-                    ),
-                    Positioned(
-                      left: 5,
-                      bottom: 5,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            musicList.name,
-                            style: kFontStyle1.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                                letterSpacing: 1.0),
-                          ),
-                          Text(
-                            musicList.duration,
-                            style: kFontStyle3.copyWith(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w100,
+                        ),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  musicList.name,
+                                  style: kFontStyle1.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                      letterSpacing: 1.0),
+                                ),
+                                Text(
+                                  musicList.duration,
+                                  style: kFontStyle3.copyWith(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w100,
+                                  ),
+                                ),
+                              ],
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 20,
-                    )
                   ],
                 ));
           }),
