@@ -1,5 +1,5 @@
 # Meditation Apps
-<img width="100%" src="https://github.com/nisrulz/flutter-examples/blob/develop/img/github_banner.png" />
+
 
 <!-- Your title -->
 <img width="100%" src="https://user-images.githubusercontent.com/44578997/123513878-e8535000-d6b9-11eb-9346-4be9636d9fd2.gif" />
