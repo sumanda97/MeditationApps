@@ -5,7 +5,9 @@
 <img width="100%" src="https://user-images.githubusercontent.com/44578997/123513878-e8535000-d6b9-11eb-9346-4be9636d9fd2.gif" />
 
 ## Figma Design 
-https://www.figma.com/file/nzEEBHt6cdRvcZGtkv1cGb/Meditation-app-UI-Community.
+![second shot v2](https://user-images.githubusercontent.com/44578997/128599290-5b1f7931-7041-42eb-aebe-990d97fab0db.png)
+
+https://www.figma.com/community/file/882888114457713282.
 
 Star⭐ the repo if you like what you see😉.
 
